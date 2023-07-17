@@ -15,6 +15,10 @@ Output: (examples)
     .
     .
     5) input a = x, then output : 1, 3, 5, 7, .......
+
+
+
+    
 Problem-3: With a single integer as the input, generate the following until a = x [series of numbers as shown in below examples]
 
 Output: (examples)
@@ -27,6 +31,10 @@ Output: (examples)
     .
     .
     7) input a = x, then output : 1, 3, 5, 7, .......
+
+
+
+    
 Problem-4: Get the total count of number listed in the dictionary which is multiple of [1,2,3,4,5,6,7,8,9]
 (examples)
 input: [1,2,8,9,12,46,76,82,15,20,30]
