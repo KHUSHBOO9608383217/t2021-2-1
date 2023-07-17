@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class Calculator {
+	public double add(double a, double b) {
+        return a + b;
+    }
+
+    public double subtract(double a, double b) {
+        return a - b;
+    }
+
+    public double multiply(double a, double b) {
+        return a * b;
+    }
+
+    public double divide(double a, double b) {
+        if (b == 0) {
+            throw new ArithmeticException("Cannot divide by zero");
+        }
+        return a / b;
+    }
+}
+
+
+public class CalculatorApp {
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the value of 'a': ");
+        double a = scanner.nextDouble();
+
+        System.out.print("Enter the value of 'b': ");
+        double b = scanner.nextDouble();
+
+        System.out.print("Enter the type of operation (Addition, Subtraction, Multiplication, Division): ");
+        String operation = scanner.next();
+
+        Calculator calculator = new Calculator();
+        double result;
+
+        switch (operation) {
+            case "Addition":
+                result = calculator.add(a, b);
+                System.out.println("Result: " + result);
+                break;
+            case "Subtraction":
+                result = calculator.subtract(a, b);
+                System.out.println("Result: " + result);
+                break;
+            case "Multiplication":
+                result = calculator.multiply(a, b);
+                System.out.println("Result: " + result);
+                break;
+            case "Division":
+                try {
+                    result = calculator.divide(a, b);
+                    System.out.println("Result: " + result);
+                } catch (ArithmeticException e) {
+                    System.out.println("Error: " + e.getMessage());
+                }
+                break;
+            default:
+                System.out.println("Invalid operation.");
+                break;
+        }
+    }
+
+}
